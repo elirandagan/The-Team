@@ -14,7 +14,7 @@ the program contains :
 * 6. implement images to PDF tool
 * 7. MENU python project to manage all functions and data in the system
 
-@ degined & developed by :
+@ designed & developed by :
   * Lior Elisberg
   * Eliran Dagan
   * Mendal Amar
