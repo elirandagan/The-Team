@@ -2,7 +2,7 @@ import json
 from user_database import user_list
 
 
-def save_user_db_file():
+def save_user_db_file(user_list):
     with open("user_db_file.txt", 'w') as file:
         json.dump(user_list, file, indent=2)
 

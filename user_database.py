@@ -1,8 +1,8 @@
 from classes import Student, Lecturer, Coordinator
 
-user_list = {"Student": [("full name", "password")],
-             "Lecturer": [["full name", "phone number", "profession", "password"]],
-             "Coordinator": [["full name", "phone number", "password"]]}
+user_list = {"Student": [("student", "password")],
+             "Lecturer": [["lecture", "phone number", "profession", "password"]],
+             "Coordinator": [["coordinator", "phone number", "password"]]}
 
 "Database of questions using dictionary"
 
