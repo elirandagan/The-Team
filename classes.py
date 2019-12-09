@@ -75,6 +75,31 @@ def set_subtopic(self, question_subtopic):
     self.subtopic = question_subtopic
 
 
+class Clause:
+    def __init__(self, clause_number='', clause_subject='', clause_difficulty=''):
+        self.clause_number = clause_number
+        self.clause_subject = clause_subject
+        self.clause_difficulty = clause_difficulty
+
+    def set_clause_number(self, number):
+        self.clause_number = number
+
+    def get_clause_number(self):
+        return self.clause_number
+
+    def set_clause_subject(self, sub):
+        self.clause_subject = sub
+
+    def get_clause_subject(self):
+        return self.clause_subject
+
+    def set_clause_difficulty(self, dif):
+        self.clause_difficulty = dif
+
+    def get_clause_difficulty(self):
+        return self.clause_difficulty
+
+
 class Lecturer:
     def __init__(self, name='', phone_number='', topic='', password=''):
         self.name = name
@@ -148,4 +173,3 @@ class Coordinator:
 
     def set_password(self, coordinator_password):
         self.password = coordinator_password
-
