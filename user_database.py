@@ -1,4 +1,4 @@
-from users import Student, Lecturer, Coordinator
+from classes import Student, Lecturer, Coordinator
 
 user_list = {"Student": [("full name", "password")],
              "Lecturer": [["full name", "phone number", "profession", "password"]],
@@ -22,8 +22,8 @@ def del_user(string: str):
             user_list["Lecturer"].pop(0)
 
 
-stu = Student("eliran", "123")
-add_user(stu)
-print(user_list["Student"])
-del_user("full name")
-print(user_list["Lecturer"])
+# stu = Student("eliran", "123")
+# add_user(stu)
+# print(user_list["Student"])
+# del_user("full name")
+# print(user_list["Lecturer"])

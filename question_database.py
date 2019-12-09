@@ -1,4 +1,4 @@
-from questions import Questions
+from classes import Question
 
 ques = {"question_serial_number": ["main_subject", "sub_subject", "difficulty_level", "solution", "year",
                                    "semester", "exam_date", "format"]}
@@ -6,9 +6,9 @@ ques = {"question_serial_number": ["main_subject", "sub_subject", "difficulty_le
 """ Need to be checked in the sending if its a Question class"""
 
 
-def add_question(q: Questions):
-    ques.update({q.question_serial_number: [q.main_subject, q.sub_subject, q.difficulty_lvl, q.solution, q.year
-        , q.semester, q.exam_date, q.format_q]})
+def add_question(q: Question):
+    ques.update({q.question_serial_number: [q.main_subject, q.sub_subject, q.difficulty, q.solution, q.year,
+                                            q.question_format]})
 
 
 def del_question(string: str):

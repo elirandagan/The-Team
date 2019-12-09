@@ -1,10 +1,7 @@
-# <<<<<<< HEAD:menu.py
-# # from os import system, name
-# # =======
-# # afrom os import system, name
-# # >>>>>>> menu:manu.py
 from time import sleep
 from user_database import user_list
+from user_db_file import save_user_db_file, load_user_db_file
+from questions_db_file import save_ques_db_file, load_ques_db_file
 
 user_menu = {'1': "LOGIN", '2': "EXIT"}
 student_menu = {'1': "EXIT", '2': "CHOOSE A QUESTION", '3': "SHOW A QUESTIONS", '4': "FILTER A QUESTION",
@@ -25,8 +22,12 @@ def clear():
 
 
 def to_exit():
+    save_ques_db_file(user_list)
+    save_user_db_file(user_list)
     print("\t***  BYE BYE !  ***")
     exit(0)
+
+def load_dbs():
 
 
 def get_key(state: dict):
