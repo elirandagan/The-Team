@@ -1,12 +1,12 @@
 import json
-from database_questions import ques
+from question_database import ques
 
 
-def save_ques_db_file():
+def save_ques_db_file(questions: dict):
     with open("user_db_file.txt", 'w') as file:
-        json.dump(ques, file, indent=2)
+        json.dump(questions, file, indent=2)
 
 
-def load_ques_db_file():
+def load_ques_db_file(questions: dict):
     with open("user_db_file.txt", 'r') as file:
-        ques = json.load(file)
+        questions = json.load(file)
