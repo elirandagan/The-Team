@@ -8,14 +8,21 @@ user_menu = {'1': "LOGIN", '2': "EXIT"}
 student_menu = {'1': "EXIT", '2': "CHOOSE A QUESTION", '3': "SHOW A QUESTIONS", '4': "FILTER A QUESTION",
                 '5': "SEARCH A QUESTION"}
 lecturer_menu = dict()
-lecturer_menu.update({'6': "CREATE A TEST"})
 lecturer_menu.update(student_menu.copy())
+lecturer_menu.update({'6': "CREATE A TEST"})
 
 coordinator_menu = dict()
+coordinator_menu.update(lecturer_menu.copy())
 coordinator_menu.update({'7': "ADD TEACHER", '8': "REMOVE A TEACHER", '9': "UPDATE A TEACHER",
                          '10': "ADD A QUESTION", '11': "ADD AN ANSWER",
                          '12': "DELETE A QUESTION", '13': "UPDATE A QUESTION", '14': "DEFINE QUESTION INFO", })
-coordinator_menu.update(lecturer_menu.copy())
+lecturer_menu.update({'7': "ADD DIFFICULTY TO A QUESTION'S CLAUSES"})
+
+
+def add_clauses_difficulty():
+    print("\t***  choose a question  ***")
+    print("\t***   for each clause, enter a difficulty in level 1-10 ***")
+    print("\t***  BYE BYE !  ***")
 
 
 def clear():
@@ -182,6 +189,10 @@ def display_lecturer_menu():
         clear()
     elif key == '6':
         print("\t   a test has created    *** ")
+        sleep(2)
+        clear()
+    elif key == '7':
+        add_clauses_difficulty()
         sleep(2)
         clear()
     else:

@@ -1,4 +1,5 @@
 class Question:
+
     def __init__(self, course_name='', difficulty='', solution=None, year=0,
                  question_format='Image', main_subject='', sub_subject='', num_of_clauses=0,
                  question_serial_number='0'):
@@ -11,6 +12,20 @@ class Question:
         self.main_subject = main_subject
         self.num_of_clauses = num_of_clauses
         self.sub_subject = sub_subject
+        self.clauses = []
+
+
+def get_clauses(self):
+    return self.clauses
+
+
+# def set_clauses(self):
+#     for _ in get_num_of_clauses(self):
+#         add_clause()
+
+
+def add_clause(self, new_clause):
+    self.clauses.append(new_clause)
 
 
 def get_course_name(self):
