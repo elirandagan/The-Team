@@ -1,5 +1,6 @@
 from time import sleep
 from user_database import user_list
+from question_database import ques
 from user_db_file import save_user_db_file, load_user_db_file
 from questions_db_file import save_ques_db_file, load_ques_db_file
 
@@ -22,12 +23,15 @@ def clear():
 
 
 def to_exit():
-    save_ques_db_file(user_list)
+    save_ques_db_file(ques)
     save_user_db_file(user_list)
     print("\t***  BYE BYE !  ***")
     exit(0)
 
+
 def load_dbs():
+    load_ques_db_file(ques)
+    load_user_db_file(user_list)
 
 
 def get_key(state: dict):
@@ -254,6 +258,7 @@ def display_coordinator_menu():
 
 
 def main():
+    load_dbs()
     display_title_bar()
     first_menu_display_title_bar()
     key = get_key(user_menu)
