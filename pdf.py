@@ -9,10 +9,10 @@ with open("exe.pdf", "rb") as in_f:
 
     page = input1.getPage(0)
     print(page.mediaBox.getUpperRight_x(), page.mediaBox.getUpperRight_y())
-    page.trimBox.lowerLeft = (5,554)
-    page.trimBox.upperRight = (504,4)
-    page.cropBox.lowerLeft = (48,257)
-    page.cropBox.upperRight = (364,133)
+    page.trimBox.lowerLeft = (5, 554)
+    page.trimBox.upperRight = (504, 4)
+    page.cropBox.lowerLeft = (48, 257)
+    page.cropBox.upperRight = (364, 133)
     output.addPage(page)
 
     with open("out.pdf", "wb") as out_f:
