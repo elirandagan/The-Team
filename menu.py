@@ -23,8 +23,8 @@ def clear():
 
 
 def to_exit():
-    save_ques_db_file(ques)
-    save_user_db_file(user_list)
+    save_ques_db_file()
+    save_user_db_file()
     print("\t***  BYE BYE !  ***")
     exit(0)
 

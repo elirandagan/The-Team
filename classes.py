@@ -1,6 +1,7 @@
 class Question:
-    def __init__(self, course_name='', difficulty=0, solution=None, year=0,
-                 question_format='Image', main_subject='', sub_subject='', question_serial_number='0'):
+    def __init__(self, course_name='', difficulty='', solution=None, year=0,
+                 question_format='Image', main_subject='', sub_subject='', num_of_clauses=0,
+                 question_serial_number='0'):
         self.question_serial_number = question_serial_number
         self.course_name = course_name
         self.difficulty = difficulty
@@ -8,6 +9,7 @@ class Question:
         self.year = year
         self.question_format = question_format
         self.main_subject = main_subject
+        self.num_of_clauses = num_of_clauses
         self.sub_subject = sub_subject
 
 
@@ -73,6 +75,14 @@ def get_subtopic(self):
 
 def set_subtopic(self, question_subtopic):
     self.subtopic = question_subtopic
+
+
+def get_num_of_clauses(self):
+    return self.num_of_clauses
+
+
+def set_num_of_clauses(self, num_of_clauses):
+    self.num_of_clauses = num_of_clauses
 
 
 class Clause:
