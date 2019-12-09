@@ -1,5 +1,4 @@
 import json
-from question_database import ques
 
 
 def save_ques_db_file(questions: dict):
@@ -10,3 +9,4 @@ def save_ques_db_file(questions: dict):
 def load_ques_db_file(questions: dict):
     with open("user_db_file.txt", 'r') as file:
         questions = json.load(file)
+    return questions
