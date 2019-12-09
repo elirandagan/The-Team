@@ -1,8 +1,8 @@
-<<<<<<< HEAD:menu.py
-from os import system, name
-=======
-afrom os import system, name
->>>>>>> menu:manu.py
+# <<<<<<< HEAD:menu.py
+# # from os import system, name
+# # =======
+# # afrom os import system, name
+# # >>>>>>> menu:manu.py
 from time import sleep
 from user_database import user_list
 
