@@ -1,0 +1,25 @@
+{
+  "Student": [
+    [
+      "student",
+      "password"
+    ],
+    [
+      "eliran",
+      "123"
+    ]
+  ],
+  "Lecturer": [
+    "tamar sarut",
+    "0521111111",
+    "programing",
+    "1234"
+  ],
+  "Coordinator": [
+    [
+      "coordinator",
+      "phone number",
+      "password"
+    ]
+  ]
+}
