@@ -8,5 +8,15 @@
     "semester",
     "exam_date",
     "format"
+  ],
+  "1": [
+    "math",
+    "none",
+    "7",
+    "none",
+    "2019",
+    "a",
+    "a",
+    "pdf"
   ]
 }

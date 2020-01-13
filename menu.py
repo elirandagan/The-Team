@@ -1,8 +1,9 @@
 from time import sleep
 from user_database import user_list
-from question_database import ques
+from question_database import ques, add_question
 from user_db_file import save_user_db_file, load_user_db_file
 from questions_db_file import save_ques_db_file, load_ques_db_file
+from classes import Question
 
 user_menu = {'1': "LOGIN", '2': "EXIT"}
 student_menu = {'1': "EXIT", '2': "CHOOSE A QUESTION", '3': "SHOW A QUESTIONS", '4': "FILTER A QUESTION",
@@ -243,6 +244,7 @@ def display_coordinator_menu():
         sleep(2)
         clear()
     elif key == '10':
+        creat_question()
         print("\t   a question was added    *** ")
         sleep(2)
         clear()
@@ -266,6 +268,30 @@ def display_coordinator_menu():
         print("INVALID KEY POPPED")
         exit(-1)
     display_coordinator_menu()
+
+
+def create_question():
+    q = Question()
+    print("please enter the serial number of the question")
+    q.set_question_serial_number(input())
+    print("please enter the main subject of the question")
+    q.set_main_subject(input())
+    print("please enter the sub subject of the question")
+    q.set_sub_subject(input())
+    print("please enter the difficulty level of the question")
+    q.set_difficulty_lvl(input())
+    print("please enter the solution of the question")
+    q.set_solution(input())
+    print("please enter the year of the question")
+    q.set_year(input())
+    print("please enter the semester of the question")
+    q.set_semester(input())
+    print("please enter the exam date of the question")
+    q.set_exam_date(input())
+    print("please enter the question format of the question")
+    q.set_question_format(input())
+
+    add_question(q)
 
 
 def main():

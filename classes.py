@@ -1,17 +1,25 @@
 class Question:
+    def set_question_serial_number(self, param):
+        pass
+
+<<<<<<< HEAD
 
     def __init__(self, course_name='', difficulty='', solution=None, year=0,
                  question_format='Image', main_subject='', sub_subject='', num_of_clauses=0,
                  question_serial_number='0'):
+=======
+    def __init__(self,question_serial_number='',main_subject='',sub_subject='',difficulty_lvl='',solution='',year=''
+                    ,semester='',exam_date='',question_format=''):
+>>>>>>> 25d4b561d60831f77c458a97a5db029999000191
         self.question_serial_number = question_serial_number
-        self.course_name = course_name
-        self.difficulty = difficulty
+        self.difficulty_lvl = difficulty_lvl
         self.solution = solution
         self.year = year
         self.question_format = question_format
         self.main_subject = main_subject
         self.num_of_clauses = num_of_clauses
         self.sub_subject = sub_subject
+<<<<<<< HEAD
         self.clauses = []
 
 
@@ -26,30 +34,37 @@ def get_clauses(self):
 
 def add_clause(self, new_clause):
     self.clauses.append(new_clause)
+=======
+        self.semester = semester
+        self.exam_date = exam_date
+>>>>>>> 25d4b561d60831f77c458a97a5db029999000191
 
+def set_main_subject(mainSubject):
+    self.main_subject = mainSubject
 
-def get_course_name(self):
-    return self.course_name
+def get_main_subject():
+    return self.main_subject
 
+def set_question_serial_number(serialNumber):
+    self.question_serial_number = serialNumber
 
-def set_course_name(self, name):
-    self.course_name = name
-
+def get_question_serial_number():
+    return self.question_serial_number
 
 def get_difficulty(self):
-    return self.difficulty
+    return self.difficulty_lvl
 
 
 def set_difficulty(self, diff):
-    self.difficulty = diff
+    self.difficulty_lvl = diff
 
 
 def get_solution_kind(self):
-    return self.solution_kind
+    return self.solution
 
 
 def set_solution_kind(self, solution_type):
-    self.solution_kind = solution_type
+    self.solution = solution_type
 
 
 def get_semester(self):
@@ -84,12 +99,12 @@ def set_question_format(self, question__format):
     self.question_format = question__format
 
 
-def get_subtopic(self):
-    return self.subtopic
+def get_sub_subject(self):
+    return self.sub_subject
 
 
-def set_subtopic(self, question_subtopic):
-    self.subtopic = question_subtopic
+def set_sub_subject(self, question_subtopic):
+    self.sub_subject = question_subtopic
 
 
 def get_num_of_clauses(self):
